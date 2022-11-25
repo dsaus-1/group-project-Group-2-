@@ -7,7 +7,7 @@ def put_product_to_cart(data):
     data['filter'] = []
     for i in catalog_list:
         for elem in i['products']:
-            if user_id == elem['id']:
+            if id_input == elem['id']:
                 data['filter'].append({'name': elem['name'], 'id': elem['id'], 'count': count_input})
                 print(f"'code': 201\n 'message': Товар {data['name']} в количестве {data['count']} штук добавлен в корзину успешно")
             if id_input != elem['id']:
