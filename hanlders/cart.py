@@ -3,7 +3,7 @@ import json
 def put_product_to_cart(data):
     with open('data_sample/catalog.json', encoding='utf-8') as json_file:
         catalog_list = json.load(json_file)
-    data = {}
+    data = []
     id_input = input("id: ")
     count_input = input("count: ")
     for i in catalog_list:
